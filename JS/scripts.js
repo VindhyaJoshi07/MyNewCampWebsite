@@ -5,8 +5,9 @@ const carousel = new bootstrap.Carousel('#homeCarousel', {
     pause: false
 })
 
+/* Part-1
 // when the pause button is clicked, pause the carousel
-const carouselPause =  document.getElementById('carouselPause');
+ const carouselPause =  document.getElementById('carouselPause');
 carouselPause.addEventListener('click', function() {
     console.log('pausing the carousel');
     carousel.pause();
@@ -17,4 +18,20 @@ const carouselPlay = document.getElementById('carouselPlay');
 carouselPlay.addEventListener('click', function() {
     console.log('cycle the carousel');
     carousel.cycle();
+}) */
+
+// Part-2
+const carouselButton = document.getElementById('carouselButton');
+const faIcon = document.getElementById('faButton');
+
+carouselButton.addEventListener('click', function() {
+    if(faIcon.classList.contains('fa-pause')) {
+        faIcon.classList.remove('fa-pause');
+        faIcon.classList.add('fa-play');
+        carousel.pause();
+    } else {
+        faIcon.classList.remove('fa-play');
+        faIcon.classList.add('fa-pause');
+        carousel.cycle();
+    }
 })
