@@ -39,6 +39,7 @@ carouselButton.addEventListener('click', function() {
     }
 })
 
+// fetching weather from weatherAPI
 async function fetchWeather() {
     console.log("hello");
     const apiKey = process.env.OPEN_WEATHER_API_KEY
